@@ -15,7 +15,9 @@
   <div class="txt-producttmi">{{cloth.content}}</div>
   <h2>상품가격</h2>
   <div class="txt-productprice">{{cloth.price}}</div>
-  <button>장바구니 담기</button>
+
+  <button><a href = "{%url 'cart-add' cloth.id %}">장바구니 담기</a></button>
+
   <div class = "layout-buy">
     <a href="" class = "txt-buy"> 구매하기 </a>
   </div>

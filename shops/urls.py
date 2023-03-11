@@ -8,5 +8,7 @@ urlpatterns = [
         "detail/<int:detail_id>/",
         views.ItemDetailView.as_view(), 
         name = 'item-detail'),
-  path('mybag/',views.mybag,name='mybag'),
+  path('mybag/',views.MybagView.as_view(),name='mybag'),
+  path('mybag/<int:cloth_id>/delete',views.cart_delete, name='cart-delete'),
+  path('detail/<int:cloth_id>/add',views.cart_add, name='cart-add'),
 ]

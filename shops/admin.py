@@ -6,4 +6,4 @@ from .models import User, Cloth
 # User 모델을 등록해줘야함
 admin.site.register(User, UserAdmin)
 admin.site.register(Cloth) #Cloth 모델 등록, admin 사이트에 반영
-UserAdmin.fieldsets += (("Custom fields", {"fields": ("nickname",)}),)
+UserAdmin.fieldsets += (("Custom fields", {"fields": ("nickname","cart")}),)
