@@ -1,0 +1,86 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>너덜너덜 쇼핑몰</title>
+  <link rel="stylesheet" type="text/css" href={% static 'shops/css/productable_style.css'%}>
+  {% block static %} {% endblock %}
+</head>
+
+<body>
+  <header class = "layout-header">
+    <button class = "layout-menu">
+      <a href="{%url 'index' %}">
+        <img class = "img-menu" src={% static "shops/images/메뉴바.png"%}>
+      </a>
+    </button>
+    <a class = "layout-logo" href ="{% url 'main'%}" title="Psyche/메인페이지로 이동">
+      <img class = "img-logo" src = {%static "shops/images/프시케.jpg"%}>
+    </a>
+    <div class="layout-header-righttop">
+      <a href ="{% url 'account_login'%}">
+        로그인
+      </a>
+      <a href ="{% url 'mybag'%}">
+        <img class="img-mybag" src={%static "shops/images/장바구니.png"%} style="width: 20px; height: 20px;">
+      </a>
+    </div>
+    <div class="layout-header-rightbot">
+      <form class = "layout-search-bar">
+        <input type ="text">
+        <input type ="image" src={%static "shops/images/검색.png"%} style="height: =20px ; width: 20px; ">
+      </form>
+    </div>
+  </header>
+
+  <div class="layout-menugender">
+    <form>
+      <label>
+        <input type='radio'
+          name='gender' 
+          value='all'
+          id= 'gender'/>
+          ALL
+      </label>
+      <label>
+        <input type='radio'
+       name='gender' 
+       value='female'
+       id='gender'/>
+        WOMAN
+      </label>
+      <label>
+        <input type='radio'
+          name='gender' 
+          value='male'
+          id='gender'/>
+          MAN
+      </label>
+    </form>
+  </div>
+  <div class="layout-menucategory">
+    <ul>
+      <li><a href="">ALL</a></li>
+      <li><a href="">TOP</a></li>
+      <li><a href="">BOTTOM</a></li>
+      <li><a href="">OUTER</a></li>
+      <li><a href="">SHOES</a></li>
+      <li><a href="">ACC</a></li>
+      <li><a href="">ETC.</a></li>
+    </ul>
+  </div>
+</div>
+  <main class = "layout-main">
+    <div class = "container">
+    {% block content %}{% endblock content %}
+    {% block item_list %} {% endblock item_list %}
+    {% block item_detail %}{% endblock item_detail %}
+    {% block mybag %}{% endblock mybag %}
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{% extends "shops_base/base.html" %}
+{%load static%}
+
+{% block static %}
+    <link rel="stylesheet" href="{% static 'shops/css/mybag.css' %}">
+{% endblock %}
+
+{% block mybag %}
+<div class="layout-mybagscroll">
+    <ul class ="mybaglist">
+      <li class="mybagitem">
+        <div class="layout-itemimg">
+            <img class="img-item"  src={% static "shops/images/발렌.PNG"%} style="height: 200px;">
+        </div>
+        <div class="layout-mybaginfo">
+         <div class="txt-name">발렌시아가</div>
+         <div class="txt-size">size</div>   
+         <div class="txt-price">price</div>
+        </div>
+        <div>
+          <button class="btn-delete">제거하기</button>
+        </div>
+      </li>
+    </ul>
+</div>
+{% endblock mybag %}

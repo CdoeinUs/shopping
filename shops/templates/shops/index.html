@@ -1,0 +1,48 @@
+{% extends "shops_base/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block static %}
+    <link rel="stylesheet" href="{% static 'shops/css/productable_style.css' %}">
+{% endblock %}
+
+{% block item_list %}
+
+<div class="contents">
+  {% for cloth in products %}
+  <a href="{% url 'item-detail' cloth.id%}">  
+    <section class="cp-card content">    
+      <div class = "item_list">
+        <div  class = "card">
+          <div class = 'title'>
+            <h2> {{cloth.title}} </h2>
+          </div>
+            <img src="{{ cloth.image1.url }}" width="150px">
+          <div class="review-rating">
+            <span class="cp-stars">
+              {%for i in ""|ljust:cloth.rating %}★{% endfor %}
+            </span>
+            <date class="date">{{cloth.dt_created|date:"Y년 n월 j일"}}</date>
+          </div>
+          <div class = 'explain'>{{cloth.content}}</div>
+          <div class="price">
+            <span>가격 : {{cloth.price}}</span>
+          </div>
+          <a href = "#"><button>사러가기</button></a>
+        </div>
+      </div>
+    </section>
+  </a>
+  {%empty%}
+  <p class="empty">아직 리뷰가 없어요 :(</p>
+  {% endfor %}
+</div>
+
+{% if user.is_authenticated%}
+  <p><a href="{% url 'account_change_password'%}">비밀번호 변경</a></p>
+{% else %}
+  <p>로그아웃 된 상태입니다.</p>
+{% endif %}
+
+{% endblock item_list %}
+

@@ -1,0 +1,54 @@
+.layout-mybagscroll{
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  height: 500px;
+  width: 900px;
+  overflow: auto;
+}
+.mybaglist{
+  list-style: none;
+}
+.mybagitem{
+  display: block;
+  background-color: white;
+  width: 800px;
+  height: 200px;
+}
+.layout-itemimg{
+  height: 100%;
+  float: left;
+}
+.layout-mybaginfo{
+  height: 100%;
+  margin-left: 20px;
+  background-color: blueviolet;
+  float: left;
+}
+
+.btn-delete{
+  float: right;
+}
+
+.layout-buybtn{
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  background-color: beige;
+  width: 250px;
+  height: 80px;
+  
+}
+.txt-buy{
+  position: absolute;
+  width: 250px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+}
+.totalprice{
+  position: fixed;
+  right: 190px;
+  bottom: 120px;
+  
+}

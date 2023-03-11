@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+   
+  .Id-form {
+      position: absolute;
+      width: 300px;
+      background-color: #EEEFF1;
+      border: none;
+      top : 200px;
+      left : 25%;
+      transform : translate(-50%, 0%);
+      border-radius: 5px;
+      text-align : center;  
+      height: 250px;
+  }
+  
+  .PW-form {
+      position: absolute;
+      width: 300px;
+      background-color: #EEEFF1;
+      border: none;
+      top : 200px;
+      left : 50%;
+      transform : translate(-50%, 0%);
+      border-radius: 5px;
+      text-align : center;  
+      height: 300px;
+  }
+   
+  .account-form {
+      position: absolute;
+      width: 300px;
+      background-color: #EEEFF1;
+      border: none;
+      top : 200px;
+      left : 75%;
+      transform : translate(-50%, 0%);
+      border-radius: 5px;
+      text-align : center;  
+      height: 400px;
+  }
+  .text-field {
+        font-size: 14px;
+        padding: 10px;
+        border: none;
+        width: 260px;
+        margin-bottom: 10px;
+   
+  }
+   
+  .submit-btn {
+    font-size: 14px;
+    border: none;
+    padding: 10px;
+    width: 260px;
+    background-color: #1BBC9B;
+    margin-bottom: 30px;
+    color: white;
+  }
+   
+  .links {
+      text-align: center;
+  }
+   
+  .links a {
+    font-size: 12px;
+    color: #9B9B9B;
+  }
+  
+  .layout-header {
+    display: block;
+    width: 100%;
+    height: 150px;
+    background-color: gray;
+    position: relative;
+  }
+  .layout-logo{
+    display: inline;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%, 0%)
+  }
+  .img-logo{
+    width: 150px;
+    height: 150px;
+  }
+  .layout-menu{
+    display: inline;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: gray;
+    border: none;
+    text-align: center;
+  }
+  .img-menu{
+    width: 100%;
+    height: 100%;
+  }
+  .layout-header-righttop{
+    position: absolute;
+    float: right;
+    right: 10px;
+    top: 10px;
+  }
+  .layout-header-rightbot{
+    float: right;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+  }
+  .layout-main{
+    display: block;
+    background-color: #891414;
+    height: 100%;
+  
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
